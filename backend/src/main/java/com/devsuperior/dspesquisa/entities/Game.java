@@ -27,10 +27,17 @@ public class Game implements Serializable{
 	private String title;
 	private Platform platform;
 	
+	/*
+	  @JsonIgnore:
+	  Evita dar loop no Postman, pois o game está associado em Genre e Record e o Genre tb tem associação em Games.
+	  Ou seja, tem uma associação de mão dupla e na hora de gerar resposta, o Postman lança excessão.	
+	*/
+	//@JsonIgnore 
 	@ManyToOne
 	@JoinColumn(name = "genre_id")
 	private Genre genre;
 	
+	//@JsonIgnore
 	@OneToMany(mappedBy = "game")
 	List<Record> record = new ArrayList<>();
 	
