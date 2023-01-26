@@ -44,7 +44,5 @@ public class GameDTO implements Serializable{
 
 	public void setPlatform(Platform platform) {
 		this.platform = platform;
-	}
-	
-	
+	}	
 }
