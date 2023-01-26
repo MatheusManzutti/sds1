@@ -33,7 +33,7 @@ public class RecordService {
 		entity.setAge(dto.getAge());
 		entity.setMoment(Instant.now()); //pega o momento atual do horario de acesso
 		
-		Game game = gameRepository.getReferenceById(dto.getGameId());
+		Game game = gameRepository.getOne(dto.getGameId());
 		entity.setGame(game);
 		
 		repository.save(entity);

@@ -3,8 +3,8 @@ package com.devsuperior.dspesquisa.dto;
 import java.io.Serializable;
 import java.time.Instant;
 
+import com.devsuperior.dspesquisa.entities.Platform;
 import com.devsuperior.dspesquisa.entities.Record;
-import com.devsuperior.dspesquisa.entities.enums.Platform;
 
 public class RecordDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
